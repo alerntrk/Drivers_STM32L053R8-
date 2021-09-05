@@ -434,6 +434,6 @@ typedef struct {
 #include "SPI.h"
 #include "UART.h"
 #include "RCC.h"
-#include "I2C.h"
+
 
 #endif /* STM32L0XX_H_ */
