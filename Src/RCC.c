@@ -47,33 +47,7 @@ uint32_t HAL_RCC_GetPCLK2Freq(void)
 
 
 /**
-  * @brief  Returns the SYSCLK frequency
-  * @note   The system frequency computed by this function is not the real
-  *         frequency in the chip. It is calculated based on the predefined
-  *         constant and the selected clock source:
-  * @note     If SYSCLK source is MSI, function returns a value based on MSI
-  *             Value as defined by the MSI range.
-  * @note     If SYSCLK source is HSI, function returns values based on HSI_VALUE(*)
-  * @note     If SYSCLK source is HSE, function returns a value based on HSE_VALUE(**)
-  * @note     If SYSCLK source is PLL, function returns a value based on HSE_VALUE(**)
-  *           or HSI_VALUE(*) multiplied/divided by the PLL factors.
-  * @note     (*) HSI_VALUE is a constant defined in stm32l0xx_hal_conf.h file (default value
-  *               16 MHz) but the real value may vary depending on the variations
-  *               in voltage and temperature.
-  * @note     (**) HSE_VALUE is a constant defined in stm32l0xx_hal_conf.h file (default value
-  *                8 MHz), user has to ensure that HSE_VALUE is same as the real
-  *                frequency of the crystal used. Otherwise, this function may
-  *                have wrong result.
-  *
-  * @note   The result of this function could be not correct when using fractional
-  *         value for HSE crystal.
-  *
-  * @note   This function can be used by the user application to compute the
-  *         baud-rate for the communication peripherals or configure other parameters.
-  *
-  * @note   Each time SYSCLK changes, this function must be called to update the
-  *         right SYSCLK value. Otherwise, any configuration based on this function will be incorrect.
-  *
+  * 
   * @retval SYSCLK frequency
   */
 uint32_t RCC_GetSysClockFreq(void)
